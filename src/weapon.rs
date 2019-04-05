@@ -1,5 +1,4 @@
 use rand::Rng;
-
 #[derive(Debug)]
 pub enum Weapon {
     ROCK,
@@ -10,8 +9,11 @@ pub enum Weapon {
 pub fn get_user_weapon(player_choice: &str) -> Weapon {
     match player_choice {
         "rock" => Weapon::ROCK,
+        "r" => Weapon::ROCK,
         "paper" => Weapon::PAPER,
+        "p" => Weapon::PAPER,
         "scissors" => Weapon::SCISSORS,
+        "s" => Weapon::SCISSORS,
         _ => panic!("Error"),
     }
 }
